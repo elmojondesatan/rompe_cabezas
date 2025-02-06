@@ -1,23 +1,25 @@
+import { cargarCartas } from "./components/tablero/tablero.js";
 let DOM = document.querySelector("#root");
 
-let contenedor = document.createElement("div");
-contenedor.className = "contenedor";
+let contenedor = document.createElement('div');
 
-let div_header = document.createElement("div");
-div_header.className = "div_header";
-contenedor.appendChild(div_header);
+let footer = document.createElement("div");
+contenedor.appendChild(footer);
+footer.className = "div-footer"
 
+let progreso = document.createElement("div");
+contenedor.appendChild(progreso);
+progreso.className = "div-progreso";
 
-let div_tablero = document.createElement("div");
-div_tablero.className = "div_tablero";
-contenedor.appendChild(div_tablero);
+let tablero = document.createElement("div");
+contenedor.appendChild(tablero);
+tablero.className = "div-tablero";
+tablero.appendChild(cargarCartas());
+    
 
-let div_progreso = document.createElement("div");
-div_progreso.className = "div_progreso";
-contenedor.appendChild(div_progreso);
+let header = document.createElement("div");
+contenedor.appendChild(header);
+header.className = "div-header";
 
-let div_footer = document.createElement("div");
-div_footer.className = "div_footer";
-contenedor.appendChild(div_footer);
-
-DOM.appendChild(contenedor);    
+DOM.appendChild(contenedor);
+contenedor.className = "div-contenedor";
