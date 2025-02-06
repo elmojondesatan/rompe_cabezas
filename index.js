@@ -1,4 +1,9 @@
 import { cargarCartas } from "./components/tablero/tablero.js";
+import { headerr } from "./components/header/header.js";
+
+headerr();
+
+
 let DOM = document.querySelector("#root");
 
 let contenedor = document.createElement('div');
@@ -18,6 +23,7 @@ tablero.appendChild(cargarCartas());
     
 
 let header = document.createElement("div");
+header.appendChild(headerr());
 contenedor.appendChild(header);
 header.className = "div-header";
 
