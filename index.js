@@ -15,7 +15,8 @@ let tablero = document.createElement("div");
 contenedor.appendChild(tablero);
 tablero.className = "div-tablero";
 tablero.appendChild(cargarCartas());
-    
+
+
 
 let header = document.createElement("div");
 contenedor.appendChild(header);
@@ -23,3 +24,11 @@ header.className = "div-header";
 
 DOM.appendChild(contenedor);
 contenedor.className = "div-contenedor";
+
+let todasLasCartasDelDOOM = document.querySelectorAll('.carta');
+todasLasCartasDelDOOM.forEach(cadaCarta  => {
+    cadaCarta.addEventListener("click", ()=>{
+        cadaCarta.classList.add("marcado");
+    
+    });
+});

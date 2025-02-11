@@ -12,9 +12,11 @@ function item(contenido){
 function cargarCartas(){
     let div = document.createElement('div');
     div.className = "div-tablero";
+
     todas_las_cartas.forEach((letra)=>{
         div.appendChild(item(letra));
     });
+    
 
     return div;
 }

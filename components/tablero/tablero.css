@@ -17,4 +17,16 @@
     
     font-size: 2rem;
 
+    cursor: pointer;
+
+}
+
+.carta:hover{
+    border: 2px solid rgb(211, 82, 82);
+    transition: 0.3s;
+}
+
+
+.marcado{
+    background-color: red;
 }
