@@ -1,0 +1,5 @@
+function cargarFooter(){
+
+}
+
+export {cargarFooter}

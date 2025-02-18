@@ -1,32 +1,18 @@
-import { todas_las_cartas } from "./data.js";
+// tablero.js
+import { cartas } from "./data.js"  // Asegúrate de que la ruta de data.js esté correcta
+import { mezclarCartas, cargarCartas } from "./funcionesCartas.js";  // Asegúrate de que las rutas estén correctas
 
-function item(contenido) {
-    let div = document.createElement('div');
-    div.className = "carta";
-    
-    let front = document.createElement('div');
-    front.className = "front";
-    front.textContent = contenido;
-    
-    let back = document.createElement('div');
-    back.className = "back";
-    back.textContent = "?";
-    
-    div.appendChild(front);
-    div.appendChild(back);
-
-    return div;
+// Función para barajar las cartas
+function barajarCartas() {
+    let allCartas = cartas.concat(cartas);  // Duplicar las cartas
+    return mezclarCartas(allCartas);  // Mezclar las cartas duplicadas
 }
 
-function cargarCartas() {
-    let div = document.createElement('div');
-    div.className = "div-tablero";
-
-    todas_las_cartas.forEach((letra) => {
-        div.appendChild(item(letra));
-    });
-    
-    return div;
+// Función para cargar el tablero con cartas
+function cargarTablero() {
+    let cartasMezcladas = barajarCartas();  // Obtener las cartas barajadas
+    return cargarCartas(cartasMezcladas);   // Cargar las cartas en el tablero
 }
 
-export { cargarCartas };
+// Exportar las funciones
+export { cargarTablero };

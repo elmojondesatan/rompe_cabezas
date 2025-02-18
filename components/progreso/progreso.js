@@ -1,0 +1,4 @@
+function cargarProgreso(){
+
+}
+export {cargarProgreso};
